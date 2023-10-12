@@ -15,6 +15,7 @@ const emailAddress = [
     'francescoruffa@boolean.com'
 ];
 
+
 const btn = document.querySelector ('button');
     btn.addEventListener('click', function(){
     const email = document.getElementById ('email').value;
@@ -41,3 +42,30 @@ const btn = document.querySelector ('button');
 
 
 console.log(emailAddress);
+
+//DADI
+
+const diceResults = [
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6'
+];
+
+const userNumber = document.getElementById('user-number');
+const botNumber = document.getElementById('bot-number');
+const dicebutton = document.getElementById('dice-button');
+
+function getRndInteger(min,max) {
+    return Math.floor(Math.random() * (max- min + 1) ) + min;
+}
+dicebutton.addEventListener('click', function(){
+    let random1 = diceResults[getRndInteger(0, diceResults.length - 1)];
+    let random2 = diceResults[getRndInteger(0, diceResults.length - 1)];
+    console.log(random1);
+    console.log(random2);
+    userNumber.innerHTML = random1;
+    botNumber.innerHTML = random2;
+})

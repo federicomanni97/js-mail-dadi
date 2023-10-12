@@ -53,19 +53,26 @@ const diceResults = [
     '5',
     '6'
 ];
-
 const userNumber = document.getElementById('user-number');
 const botNumber = document.getElementById('bot-number');
 const dicebutton = document.getElementById('dice-button');
-
+const message2 = document.getElementById('winLoseText');
 function getRndInteger(min,max) {
     return Math.floor(Math.random() * (max- min + 1) ) + min;
 }
 dicebutton.addEventListener('click', function(){
     let random1 = diceResults[getRndInteger(0, diceResults.length - 1)];
     let random2 = diceResults[getRndInteger(0, diceResults.length - 1)];
-    console.log(random1);
-    console.log(random2);
     userNumber.innerHTML = random1;
     botNumber.innerHTML = random2;
+    let text2
+    if(random1 > random2){
+        text2 = 'You Win!';
+    }  else if(random2 > random1){
+        text2 = 'CPU Win!';
+    } else{
+        text2 = 'Tie!';
+    }
+
+    message2.innerText = text2;
 })

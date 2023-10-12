@@ -22,7 +22,7 @@ const btn = document.querySelector ('button');
 
     let correct = false;  
     console.log(email);
-    for(let i = 0; i < emailAddress; i++){
+    for(let i = 0; i < emailAddress.length; i++){
         let writedemail = emailAddress[i];
         if(writedemail === email){
             correct = true;

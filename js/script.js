@@ -16,12 +16,28 @@ const emailAddress = [
 ];
 
 const btn = document.querySelector ('button');
-const email = document.getElementById ('email').value;
+    btn.addEventListener('click', function(){
+    const email = document.getElementById ('email').value;
+    const message = document.getElementById ('wrongTrueMessage');
 
-btn.addEventListener('click', function(){
-    let useremail = document.getElementById ('email').value;
-    console.log(useremail);
-})
+    let correct = false;  
+    console.log(email);
+    for(let i = 0; i < emailAddress; i++){
+        let writedemail = emailAddress[i];
+        if(writedemail === email){
+            correct = true;
+        }
+    }    
+    let text;
+    if(correct){
+        text = 'Email Corretta!';
+    }  else{
+        text = 'Email Non Esistente!';
+    }
+    message.classList.remove('d-none');
+    message.innerText = text;
+
+});
 
 
 console.log(emailAddress);

@@ -15,6 +15,13 @@ const emailAddress = [
     'francescoruffa@boolean.com'
 ];
 
-for ( let i = 0;)
+const btn = document.querySelector ('button');
+const email = document.getElementById ('email').value;
+
+btn.addEventListener('click', function(){
+    let useremail = document.getElementById ('email').value;
+    console.log(useremail);
+})
+
 
 console.log(emailAddress);

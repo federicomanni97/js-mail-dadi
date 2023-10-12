@@ -11,7 +11,10 @@ const emailAddress = [
     'mariorossi@boolean.com', 
     'lucaposillipo@boolean.com',
     'alessandrosiani@boolean.com',
-    'paoloverdi@boolean.com'
+    'paoloverdi@boolean.com',
+    'francescoruffa@boolean.com'
 ];
+
+for ( let i = 0;)
 
 console.log(emailAddress);
